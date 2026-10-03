@@ -43,3 +43,28 @@ A SOC Analyst can review Windows Security Logs to identify:
 - Authentication Analysis
 - Threat Detection
 - Basic Incident Investigation
+## Investigation Findings
+
+### Event ID 4624 - Successful Logon
+
+- Logon Type: 5
+- Meaning: Service Logon
+- Result: Successful Logon
+- Assessment: Generally normal Windows service activity. An unexpected service account should be investigated.
+
+### Event ID 4625 - Failed Logon
+
+- Logon Type: 2
+- Meaning: Interactive Logon
+- Result: Failed Logon
+- Status: 0xC000006D
+- Assessment: A failed interactive logon was recorded. A single failure may be normal, but repeated failures should be investigated for possible password-guessing or brute-force activity.
+
+## SOC Analyst Investigation Approach
+
+1. Identify the Event ID.
+2. Check the Logon Type.
+3. Review the account involved.
+4. Check the time of the event.
+5. Look for repeated failed logons.
+6. Investigate unusual or suspicious authentication activity.
