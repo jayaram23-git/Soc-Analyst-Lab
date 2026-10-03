@@ -2,22 +2,44 @@
 
 ## Objective
 
-Analyze Windows security event logs to understand successful and failed logon activities.
+Analyze Windows Security Event Logs to identify successful and failed logon activities and understand how a SOC Analyst can investigate suspicious authentication events.
 
-## Topics Covered
+## Tools Used
 
-- Windows Event Logs
-- Event ID 4624 – Successful Logon
-- Event ID 4625 – Failed Logon
-- Logon Type 2 – Interactive
-- Logon Type 3 – Network
-- Logon Type 10 – RemoteInteractive
-- Logon Type 11 – CachedInteractive
+- Windows Event Viewer
+- Windows Security Logs
 
-## SOC Analyst Skills
+## Event IDs Analyzed
 
-- Log Analysis
-- Windows Security Monitoring
+| Event ID | Description |
+|----------|-------------|
+| 4624 | Successful Logon |
+| 4625 | Failed Logon |
+
+## Logon Types
+
+| Logon Type | Description |
+|------------|-------------|
+| 2 | Interactive Logon |
+| 3 | Network Logon |
+| 10 | RemoteInteractive / Remote Desktop |
+| 11 | CachedInteractive Logon |
+
+## SOC Analyst Investigation
+
+A SOC Analyst can review Windows Security Logs to identify:
+
+- Repeated failed login attempts
+- Successful logins after multiple failures
+- Suspicious remote logins
+- Unusual login times
+- Unexpected source IP addresses
+- Possible brute-force activity
+
+## Skills Demonstrated
+
+- Windows Log Analysis
+- Security Event Monitoring
 - Authentication Analysis
 - Threat Detection
-- Incident Investigation
+- Basic Incident Investigation
